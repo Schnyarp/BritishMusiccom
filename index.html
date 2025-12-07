@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>britishmusic.com — Premium Domain For Sale</title>
+  <meta name="description" content="britishmusic.com — premium domain ideal for music platforms, labels, event promoters, artist networks, radio and cultural archives focused on British music. Submit an offer to purchase." />
+  <meta property="og:title" content="britishmusic.com — Premium Domain For Sale" />
+  <meta property="og:description" content="britishmusic.com — premium domain for music platforms, labels, festivals, radio and cultural archives celebrating British music. Contact domain@britishmusic.com" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b2b57" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --max-width:1120px;
+      --panel:#ffffff;
+      --cream:#fff9f3;
+      --muted:#65707a;
+      --navy:#0b2b57;       /* primary */
+      --brit-red:#c4282d;   /* accent */
+      --gold:#d9b44a;       /* highlight */
+      --ink:#121416;
+      --radius:14px;
+      --shadow: 0 30px 90px rgba(6,12,18,0.06);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:36px 20px;
+      color:var(--ink);
+      background:
+        radial-gradient(700px 240px at 12% 14%, rgba(11,43,87,0.04), transparent 12%),
+        linear-gradient(180deg,var(--cream) 0%, #fff5ea 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;
+      overflow-y:auto;
+      line-height:1.45;
+    }
+
+    /* Background: modern British music scene chosen by assistant
+       - abstract Union Jack as watermark (soft, non-dominant)
+       - stage spotlights and vinyl silhouettes
+       - floating instrument icons (guitar, mic, piano key)
+       - pointer-events:none so background doesn't intercept interactions
+    */
+    .bg {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      overflow:visible;
+    }
+
+    .union {
+      position:fixed;
+      left:50%;
+      top:8%;
+      width:1200px;
+      height:420px;
+      transform:translateX(-50%);
+      background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 420'><g fill='none'><rect width='1200' height='420' fill='none'/><g opacity='0.06' fill='%230b2b57'><path d='M0 0h1200v420H0z'/></g><g opacity='0.04' fill='%23ffffff'><path d='M0 0 L1200 420 M1200 0 L0 420' stroke='%23fff' stroke-width='80' stroke-linecap='square'/></g></g></svg>");
+      background-repeat:no-repeat;
+      background-size:cover;
+      mix-blend-mode:multiply;
+      opacity:0.9;
+      filter: blur(0.6px);
+    }
+
+    .spotlights {
+      position:fixed;
+      left:50%;
+      top:8%;
+      width:980px;
+      height:380px;
+      transform:translateX(-50%);
+      z-index:0;
+      pointer-events:none;
+      background:
+        radial-gradient(closest-side, rgba(255,216,140,0.06), transparent 28%),
+        radial-gradient(closest-side, rgba(196,40,45,0.02), transparent 18%);
+      mix-blend-mode:screen;
+      opacity:0.95;
+      filter: blur(18px);
+    }
+
+    .vinyls {
+      position:fixed;
+      right:6%;
+      bottom:8%;
+      width:320px;
+      height:320px;
+      z-index:0;
+      pointer-events:none;
+      opacity:0.06;
+      background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 320'><circle cx='80' cy='80' r='48' fill='%230b2b57' opacity='0.06'/><circle cx='200' cy='200' r='64' fill='%23c4282d' opacity='0.04'/></svg>");
+      background-size:contain;
+      mix-blend-mode:screen;
+    }
+
+    .icons {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      overflow:visible;
+    }
+
+    .icon {
+      position:absolute;
+      width:56px;
+      height:56px;
+      background-size:contain;
+      background-repeat:no-repeat;
+      opacity:0.12;
+      will-change:transform,opacity;
+      filter: drop-shadow(0 12px 30px rgba(6,12,18,0.08));
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-20px) rotate(6deg); }
+      100% { transform: translateY(0) rotate(-4deg); }
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      padding:36px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.995), rgba(255,255,250,0.99));
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(6,12,18,0.03);
+      position:relative;
+      z-index:2;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+
+    .brand{ display:flex; gap:14px; align-items:center; }
+    .logo{
+      width:86px;
+      height:86px;
+      border-radius:14px;
+      background: linear-gradient(135deg,var(--navy), var(--brit-red));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:900;
+      font-size:20px;
+      box-shadow: 0 12px 36px rgba(6,12,18,0.08);
+      flex-shrink:0;
+      border:1px solid rgba(255,255,255,0.04);
+    }
+
+    h1{ margin:0; font-size:28px; color:var(--ink); }
+    p.lead{ margin:6px 0 0; color:var(--muted); font-size:14px; max-width:720px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+      margin-top:8px;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(11,43,87,0.02), rgba(196,40,45,0.02));
+      padding:16px 18px;
+      border-radius:12px;
+      color:var(--ink);
+      margin-bottom:16px;
+      border:1px solid rgba(6,12,18,0.03);
+    }
+    .hero p{ margin:0; font-size:15px; color:var(--ink); }
+
+    .panel {
+      background: var(--panel);
+      color:var(--ink);
+      padding:22px;
+      border-radius:14px;
+      box-shadow: 0 10px 34px rgba(6,12,18,0.06);
+      border: 1px solid rgba(6,12,18,0.03);
+      max-width:820px;
+    }
+
+    h2{ margin-top:0; font-size:20px; color:var(--ink); }
+    .features ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .features li{ margin-bottom:10px; }
+
+    .showcase {
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .card {
+      width:180px;
+      height:120px;
+      border-radius:10px;
+      background: linear-gradient(180deg,#fff,#fbfaf9);
+      border:1px solid rgba(6,12,18,0.03);
+      box-shadow: 0 8px 26px rgba(6,12,18,0.04);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:var(--muted);
+      font-size:13px;
+      padding:12px;
+      text-align:center;
+    }
+
+    .cta-row{ display:flex; gap:12px; margin-top:18px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none;
+      border:0;
+    }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--navy),var(--brit-red));
+      color:#fff;
+      box-shadow: 0 10px 30px rgba(6,12,18,0.12);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(6,12,18,0.06);
+      color:var(--muted);
+    }
+
+    .price { margin-top:12px; font-weight:700; color:var(--ink); font-size:16px; }
+    .muted-small { color:var(--muted); font-size:13px; margin-top:6px; }
+
+    .contact-card{
+      position:sticky;
+      top:32px;
+      align-self:start;
+      background: linear-gradient(180deg, rgba(255,255,255,0.995), rgba(255,255,250,0.98));
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(6,12,18,0.03);
+      box-shadow: 0 8px 26px rgba(6,12,18,0.035);
+      max-width:360px;
+    }
+
+    .contact-card h3{ margin:0 0 8px 0; font-size:16px; color:var(--ink); }
+    .contact-email, .contact-email a{
+      white-space:nowrap;
+      display:inline-block;
+      font-weight:700;
+      color:var(--navy);
+      word-break: normal;
+      font-size:0.98rem;
+      text-decoration:none;
+    }
+
+    form label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    form input, form textarea {
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(6,12,18,0.06);
+      background:#fff;
+      color:var(--ink);
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    form textarea{ min-height:110px; resize:vertical; }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; text-align:center; }
+
+    @media (max-width:980px){
+      .grid{ grid-template-columns: 1fr; gap:18px; }
+      .contact-card{ position:relative; top:auto; width:100%; max-width:none; }
+      .container{ padding:24px; }
+      .logo{ width:72px; height:72px; border-radius:12px; }
+      h1{ font-size:22px; }
+      .union, .spotlights, .vinyls, .icons { display:none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "url":"https://britishmusic.com",
+        "name":"britishmusic.com",
+        "description":"britishmusic.com — premium domain for music platforms, labels, festivals, radio, archives and cultural projects centered on British music."
+      },
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"domain@britishmusic.com"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="union" aria-hidden="true"></div>
+    <div class="spotlights" aria-hidden="true"></div>
+    <div class="vinyls" aria-hidden="true"></div>
+    <div class="icons" id="iconsLayer" aria-hidden="true"></div>
+  </div>
+
+  <main class="container" role="main" aria-labelledby="main-heading">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">BM</div>
+        <div>
+          <h1 id="main-heading">britishmusic.com</h1>
+          <p class="lead">Premium domain for music platforms, labels, festivals, radio, archives and cultural projects centered on British music.</p>
+        </div>
+      </div>
+
+      <div style="text-align:right">
+        <div style="color:var(--muted);font-size:13px">For inquiries</div>
+        <div class="contact-email"><a href="mailto:domain@britishmusic.com">domain@britishmusic.com</a></div>
+      </div>
+    </header>
+
+    <div class="hero" role="note" aria-live="polite">
+      <p>BritishMusic.com speaks to heritage and contemporary scene alike — ideal for platforms that showcase artists, host festivals, run radio/streaming services, or curate archives and cultural journalism.</p>
+    </div>
+
+    <section class="grid" aria-label="Main content">
+      <div>
+        <article class="panel" aria-labelledby="why-title">
+          <h2 id="why-title">Why britishmusic.com?</h2>
+          <p class="lead">A short, authoritative .com that signals category and credibility. Great for artist networks, music discovery platforms, festival brands, radio stations and archival projects focused on British music.</p>
+
+          <div class="features" style="margin-top:12px">
+            <ul>
+              <li>Immediate category recognition — useful for discoverability and SEO</li>
+              <li>Works for streaming platforms, labels, festival brands, radio and archives</li>
+              <li>Brandable across web, apps, marketing, and merchandise</li>
+            </ul>
+          </div>
+
+          <div class="showcase" aria-hidden="false">
+            <div class="card">Artist Network</div>
+            <div class="card">Festival Platform</div>
+            <div class="card">Radio & Streaming</div>
+            <div class="card">Cultural Archive</div>
+          </div>
+
+          <div class="cta-row" role="group" aria-label="Actions">
+            <a class="btn btn-primary" href="#" id="inquireBtn">Make an Offer</a>
+            <a class="btn btn-ghost" href="mailto:domain@britishmusic.com?subject=Domain%20Offer%20-%20britishmusic.com">Email Now</a>
+          </div>
+
+          <div class="price">Domain: britishmusic.com</div>
+          <div class="muted-small">Serious offers only. Transfer via escrow recommended for secure and trusted transactions.</div>
+        </article>
+
+        <article class="panel" style="margin-top:18px" aria-labelledby="about-title">
+          <h3 id="about-title" style="margin-top:0">About this domain</h3>
+          <p class="lead">BritishMusic.com is an excellent asset for founders and cultural organizations building platforms that connect audiences and artists, preserve musical history, or produce festivals and broadcast content.</p>
+
+          <ul style="color:var(--muted);margin-top:12px">
+            <li>Great for music platforms, labels, festivals, radio, and archives</li>
+            <li>Useful for streaming services, discovery apps, curated editorial and cultural projects</li>
+            <li>Transfer-ready — escrow recommended to ensure a secure and verifiable transfer</li>
+          </ul>
+        </article>
+      </div>
+
+      <aside class="contact-card" aria-label="Contact & offer">
+        <div>
+          <h3 style="margin-top:0">Contact & Offer</h3>
+          <p style="margin-top:6px;color:var(--muted)">Submit an offer — this form opens your email client with the details prefilled. Or email <a href="mailto:domain@britishmusic.com" class="contact-email">domain@britishmusic.com</a>.</p>
+
+          <form id="inquiryForm" onsubmit="handleSubmit(event)" aria-label="Domain offer form">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="offer">Your offer (USD)</label>
+            <input id="offer" name="offer" type="text" placeholder="Enter your offer (USD)" required />
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Your company or organization" />
+
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Your country" required />
+
+            <label for="phone">Phone number (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">Message (questions, timeline, escrow preference)</label>
+            <textarea id="message" name="message" placeholder="Hi — I'm submitting an offer for britishmusic.com. Please share transfer instructions and next steps."></textarea>
+
+            <button class="btn btn-primary" type="submit" style="width:100%; margin-top:6px">Send Offer</button>
+          </form>
+
+          <footer style="margin-top:10px; text-align:left; color:var(--muted); font-size:13px">
+            Prefer a direct email? <a href="mailto:domain@britishmusic.com" style="color:var(--navy)" class="contact-email">domain@britishmusic.com</a>
+          </footer>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      &copy; 2025 britishmusic.com. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // floating music icons (guitar, mic, piano key) for gentle motion
+    (function placeIcons(){
+      const layer = document.getElementById('iconsLayer');
+      if(!layer) return;
+
+      const svgs = {
+        guitar: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M12 40c6-6 22-6 32-16 6-6 10-6 12-4 2 2 2 6-4 12-10 10-10 26-16 32-6 6-16 6-26-4-10-10-10-20-10-20z' fill='%230b2b57'/></svg>`),
+        mic: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='20' y='8' width='24' height='36' rx='12' fill='%23c4282d'/><path d='M32 44v8' stroke='%23000000' stroke-width='2' stroke-linecap='round'/></svg>`),
+        key: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='6' y='26' width='40' height='12' rx='2' fill='%23d9b44a'/><circle cx='50' cy='32' r='6' fill='%230b2b57'/></svg>`)
+      };
+
+      const items = [
+        {svg:svgs.guitar, left:'10%', top:'22%', size:64, dur:10000},
+        {svg:svgs.mic, left:'76%', top:'18%', size:56, dur:12000},
+        {svg:svgs.key, left:'48%', top:'66%', size:48, dur:9000},
+        {svg:svgs.guitar, left:'84%', top:'52%', size:40, dur:14000}
+      ];
+
+      items.forEach(it => {
+        const el = document.createElement('div');
+        el.className = 'icon';
+        el.style.left = it.left;
+        el.style.top = it.top;
+        el.style.width = it.size + 'px';
+        el.style.height = it.size + 'px';
+        el.style.backgroundImage = `url("data:image/svg+xml;utf8,${it.svg}")`;
+        el.style.animation = `float ${it.dur}ms ease-in-out ${Math.random()*1200}ms infinite`;
+        el.style.opacity = 0.06 + Math.random()*0.12;
+        layer.appendChild(el);
+      });
+    })();
+
+    // Compose a mailto: URL from the form contents and open user's email client
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const offer = document.getElementById('offer').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Domain Offer - britishmusic.com');
+      const bodyText =
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Company: ${company || '(not provided)'}\n` +
+        `Offer (USD): ${offer}\n` +
+        `Country: ${country}\n` +
+        `Phone: ${phone || '(not provided)'}\n\n` +
+        `Message:\n${message}\n\n---\nSent from britishmusic.com offer form`;
+
+      const body = encodeURIComponent(bodyText);
+      window.location.href = `mailto:domain@britishmusic.com?subject=${subject}&body=${body}`;
+    }
+
+    // Inquire button: scroll to form on small screens, open mailto on large screens
+    document.getElementById('inquireBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const form = document.getElementById('inquiryForm');
+      if(window.innerWidth < 900){
+        form.scrollIntoView({behavior:'smooth', block:'center'});
+        form.querySelector('input')?.focus();
+      } else {
+        const subject = encodeURIComponent('Domain Offer - britishmusic.com');
+        const body = encodeURIComponent('Hi — I would like to make an offer for britishmusic.com. Please reply with transfer instructions and next steps.');
+        window.location.href = `mailto:domain@britishmusic.com?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
+</body>
+</html>
